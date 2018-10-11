@@ -34,11 +34,11 @@ void loop()
   Serial.print("\t\t");
   Serial.println(dht.toFahrenheit(temperature), 1);
 
-  if (dht.getTemperature() <= 26){
+  if (dht.getTemperature() <= 24){
     digitalWrite (10,HIGH);
     digitalWrite (11,LOW);
   }
-  if (dht.getTemperature() > 28){
+  if (dht.getTemperature() > 25){
     digitalWrite (10,LOW);
     digitalWrite (11,HIGH);
   }
